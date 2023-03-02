@@ -1,0 +1,23 @@
+{
+  "name": "webcrawlertuto",
+  "version": "1.0.0",
+  "description": "for learn",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megalocoman/WebCrawlerTuto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megalocoman/WebCrawlerTuto/issues"
+  },
+  "homepage": "https://github.com/megalocoman/WebCrawlerTuto#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
