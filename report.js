@@ -1,3 +1,29 @@
+const fs = require('fs');
+
+ function writeToTxt(pages){
+
+    console.log("start writing to to txt.file");
+
+    let fileToWrite = `reports/report${(new Date).toJSON().slice(0,19).replaceAll("-","").replaceAll(":","")}.txt`;
+
+    for(const page of pages){
+        const url = page[0];
+        const hits = page[1];
+        let line = `Founds ${hits} links to page ${url} \n`; 
+         
+        fs.appendFile(fileToWrite, line, err => {
+            if(err){
+                console.error(err);
+            }
+        });
+    }
+
+
+    console.log(" writing to to txt.file done");
+
+}
+
+
 function printReport(pages){
     console.log("==================");
     console.log("Report");
@@ -11,7 +37,11 @@ function printReport(pages){
     console.log("==================");
     console.log("End Report");
     console.log("==================");
+
+    writeToTxt(sortedPages);
 }
+
+
 
 function sortPages(pages){
     const pagesArray = Object.entries(pages)
